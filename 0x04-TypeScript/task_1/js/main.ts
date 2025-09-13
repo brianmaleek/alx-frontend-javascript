@@ -11,12 +11,14 @@ interface Director extends Teacher {
     numberOfReports: number;
 }
 
-function printTeacher(firstName: string, lastName: string): string  {
-    return firstName.charAt(0).toUpperCase() + ". " + lastName;
-}
-
+// Define the interface for the function
 interface printTeacherFunction {
     (firstName: string, lastName: string): string;
+}
+
+// Create the function declaration that implements the interface
+function printTeacher(firstName: string, lastName: string): string {
+    return `${firstName.charAt(0)}. ${lastName}`;
 }
 
 const teacher3: Teacher = {
