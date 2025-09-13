@@ -15,7 +15,7 @@ interface PrintTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-const PrintTeacher: PrintTeacherFunction = (firstName: string, lastName: string): string  => {
+const printTeacher: PrintTeacherFunction = (firstName: string, lastName: string): string  => {
     return `${firstName.charAt(0)}. ${lastName}`;
 };
 
@@ -48,4 +48,4 @@ const director1: Director = {
 // console.log(teacher3);
 // console.log(teacher4);
 // console.log(director1);
-console.log(PrintTeacher("John", "Doe"));
+console.log(printTeacher("John", "Doe"));
