@@ -19,7 +19,7 @@ interface printTeacherFunction {
 // Function declaration
 function printTeacher(firstName: string, lastName: string): string {
     firstName = firstName.charAt(0).toUpperCase();
-    return `${firstName}. ${lastName}`;
+    return firstName + ". " + lastName;
 };
 
 // Create some teacher and director objects
