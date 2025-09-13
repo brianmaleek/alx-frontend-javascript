@@ -13,7 +13,7 @@ interface Director extends Teacher {
 
 // Define the interface for the function
 interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
+    (params: {firstName: string, lastName: string}): string;
 }
 
 // Create the function declaration that implements the interface
