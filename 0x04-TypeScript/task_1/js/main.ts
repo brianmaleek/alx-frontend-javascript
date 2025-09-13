@@ -12,12 +12,12 @@ interface Director extends Teacher {
 }
 
 // Define the interface for the function
-interface printTeacherFunction {
+interface PrintTeacher {
     (firstName: string, lastName: string): string;
 };
 
-// Function declaration
-function printTeacher(firstName: string, lastName: string): string {
+// Function declaration with explicit typing
+const printTeacher: PrintTeacher = function (firstName, lastName) {
     firstName = firstName.charAt(0).toUpperCase();
     return `${firstName}. ${lastName}`;
 };
