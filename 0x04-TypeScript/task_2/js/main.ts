@@ -11,6 +11,7 @@ interface TeacherInterface {
     workTeacherTasks(): string;
 }
 
+// Director class implementing DirectorInterface
 class Director implements DirectorInterface {
     workFromHome(): string {
         return "Working from home";
@@ -23,6 +24,7 @@ class Director implements DirectorInterface {
     }
 }
 
+// Teacher class implementing TeacherInterface
 class Teacher implements TeacherInterface {
     workFromHome(): string {
         return "Cannot work from home";
@@ -35,14 +37,30 @@ class Teacher implements TeacherInterface {
     }
 }
 
+// Function to create an employee based on salary
 function createEmployee(salary: number | string): Director | Teacher {
-    if (salary < 500) {
+    if ((salary as number) < 500) {
         return new Teacher();
     } else {
         return new Director();
     }
 }
 
-console.log(createEmployee(200)); // Teacher
-console.log(createEmployee(1000)); // Director
-console.log(createEmployee("$500")); // Director
+// String literal types
+type Subjects = "Math" | "History";
+
+// Function to teach a class
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    } else if (todayClass === "History") {
+        return "Teaching History";
+    }
+}
+
+// console.log(createEmployee(200)); // Teacher
+// console.log(createEmployee(1000)); // Director
+// console.log(createEmployee("$500")); // Director
+
+console.log(teachClass("Math")); // Teaching Math
+console.log(teachClass("History")); // Teaching History
