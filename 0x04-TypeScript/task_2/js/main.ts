@@ -55,6 +55,8 @@ function teachClass(todayClass: Subjects): string {
         return "Teaching Math";
     } else if (todayClass === "History") {
         return "Teaching History";
+    } else {
+        return "No class today";
     }
 }
 
